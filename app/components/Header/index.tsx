@@ -10,7 +10,6 @@ const Header = () => {
   return (
     <div className='flex justify-between items-center gap-7 p-7 bg-black text-white sticky top-0 sm:px-20'>
         <img className='xs:hidden sm:block w-12' src='boxing-icon.svg' alt='icon' />
-
         <ul className='flex justify-end text-center items-center gap-7'>
             <li className={`${pathname == "/home" && "bg-white rounded text-black p-2"}`}>
                 <Link href="/home">Home</Link>

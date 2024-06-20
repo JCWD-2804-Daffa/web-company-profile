@@ -28,9 +28,7 @@ const home = () => {
         <div>
           <h1 className='text-4xl font-bold mb-3'>Best Matrial Arts</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quas obcaecati quaerat odio tenetur, ipsum dolorum! Adipisci id earum tempora odit nisi consectetur suscipit dolorum nesciunt ut? Ad, nemo beatae.
-            Animi repellendus fugit amet qui aliquam sit quaerat officiis reprehenderit similique nobis voluptate doloribus odio recusandae ad cumque consectetur ipsam, obcaecati blanditiis voluptas consequuntur quis dolor maiores. Vero, sunt sequi!
-            Sapiente quisquam itaque in recusandae repellat ipsam possimus inventore fugiat corrupti dignissimos quia commodi placeat architecto amet quasi, ea praesentium nemo totam atque! Id reiciendis consequuntur nesciunt eius adipisci saepe.
+          Looking to boost your self-defense skills and enhance your personal safety? Learning martial arts is the perfect solution. Master effective self-defense techniques to feel confident and prepared in any situation. Whether it's navigating city streets or handling unexpected encounters, martial arts training equips you with the tools to stay safe and secure. Enhance your situational awareness and learn valuable conflict resolution strategies that prioritize non-violent solutions. Join us on a journey to strengthen your physical and mental resilience while fostering a community committed to personal safety and well-being. Start your martial arts journey today and empower yourself with skills that last a lifetime!
           </p>
         </div>
       </section>
@@ -64,24 +62,21 @@ const home = () => {
         </h1>
         <div className='flex xs:flex-col sm:flex-row gap-10'>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>Customer 1</h3>
+            <h3 className='text-xl'>Mas Gondrong</h3>
             <p className='text-sm italic'>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam accusamus ea odio suscipit eveniet eum optio harum aut ipsam nobis non nisi nulla ut recusandae modi eligendi, possimus consectetur!
-              Minus itaque officiis sed est consequatur repellat! Voluptatem officia impedit autem corrupti vel aspernatur non nisi asperiores consequatur hic doloremque in sapiente minus culpa porro ullam eaque, ratione temporibus at."
+            "Learning martial arts transformed how I feel walking alone at night. Now, I'm more aware and confident, knowing I have the skills to protect myself if needed. It's empowering!"
             </p>
           </div>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>Customer 2</h3>
+            <h3 className='text-xl'>Yayat Bengkel</h3>
             <p className='text-sm italic'>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam accusamus ea odio suscipit eveniet eum optio harum aut ipsam nobis non nisi nulla ut recusandae modi eligendi, possimus consectetur!
-              Minus itaque officiis sed est consequatur repellat! Voluptatem officia impedit autem corrupti vel aspernatur non nisi asperiores consequatur hic doloremque in sapiente minus culpa porro ullam eaque, ratione temporibus at."
+            "As a father, my priority is keeping my family safe. Martial arts training has given me the peace of mind that I can handle unexpected situations with calm and control. It's not just about physical strength; it's about mental readiness."
             </p>
           </div>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>Customer 3</h3>
+            <h3 className='text-xl'>Fany Jungler</h3>
             <p className='text-sm italic'>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam accusamus ea odio suscipit eveniet eum optio harum aut ipsam nobis non nisi nulla ut recusandae modi eligendi, possimus consectetur!
-              Minus itaque officiis sed est consequatur repellat! Voluptatem officia impedit autem corrupti vel aspernatur non nisi asperiores consequatur hic doloremque in sapiente minus culpa porro ullam eaque, ratione temporibus at."
+            "I used to feel anxious in crowded places, but martial arts taught me to trust my instincts and stay alert. It's amazing how much more confident I am now, knowing I have the ability to defend myself if necessary."
             </p>
           </div>
         </div>
