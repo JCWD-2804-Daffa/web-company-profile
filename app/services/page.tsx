@@ -33,24 +33,21 @@ const Service = () => {
         </h1>
         <div className='flex xs:flex-col sm:flex-row gap-10'>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>Customer 1</h3>
+            <h3 className='text-xl'>John M. - 1 Month Membership</h3>
             <p className='text-sm italic'>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam accusamus ea odio suscipit eveniet eum optio harum aut ipsam nobis non nisi nulla ut recusandae modi eligendi, possimus consectetur!
-              Minus itaque officiis sed est consequatur repellat! Voluptatem officia impedit autem corrupti vel aspernatur non nisi asperiores consequatur hic doloremque in sapiente minus culpa porro ullam eaque, ratione temporibus at."
+            "I joined the martial arts club for a one-month trial, and I've been thoroughly impressed with what I've experienced. Despite being new to martial arts, the instructors have been incredibly patient and supportive, guiding me through each technique step-by-step. In just one month, I've already noticed improvements in my flexibility and stamina. The structured classes not only challenge me physically but also mentally, enhancing my focus and discipline. This membership has been a great introduction to martial arts, and I'm seriously considering extending it."
             </p>
           </div>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>Customer 2</h3>
+            <h3 className='text-xl'>Sarah L. - 3 Month Membership</h3>
             <p className='text-sm italic'>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam accusamus ea odio suscipit eveniet eum optio harum aut ipsam nobis non nisi nulla ut recusandae modi eligendi, possimus consectetur!
-              Minus itaque officiis sed est consequatur repellat! Voluptatem officia impedit autem corrupti vel aspernatur non nisi asperiores consequatur hic doloremque in sapiente minus culpa porro ullam eaque, ratione temporibus at."
+            "I opted for the three-month membership at the martial arts club, and it has exceeded my expectations. The training regimen is well-rounded, focusing on both self-defense techniques and overall fitness. I appreciate how the instructors tailor each session to accommodate different skill levels, ensuring everyone progresses at their own pace. The supportive atmosphere among fellow members has also been motivating. After three months, I feel more confident in my ability to defend myself and have noticed significant improvements in my strength and coordination. I'm excited to continue my journey here."
             </p>
           </div>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>Customer 3</h3>
+            <h3 className='text-xl'>Michael P. - 6 Month Membership</h3>
             <p className='text-sm italic'>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam accusamus ea odio suscipit eveniet eum optio harum aut ipsam nobis non nisi nulla ut recusandae modi eligendi, possimus consectetur!
-              Minus itaque officiis sed est consequatur repellat! Voluptatem officia impedit autem corrupti vel aspernatur non nisi asperiores consequatur hic doloremque in sapiente minus culpa porro ullam eaque, ratione temporibus at."
+            "Signing up for the six-month membership at this martial arts club has been one of the best decisions I've made for my health and well-being. The longer commitment has allowed me to delve deeper into the techniques and philosophy behind martial arts. I've developed a stronger sense of discipline and mental resilience through regular practice. The club's community is tight-knit, and I've made friends who share my passion for martial arts. Physically, I've become more toned and agile, and mentally, I feel more prepared to face challenges in everyday life. This membership has truly transformed not just my fitness level, but my overall outlook."
             </p>
           </div>
         </div>
