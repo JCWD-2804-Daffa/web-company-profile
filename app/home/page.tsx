@@ -1,14 +1,74 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import axios from 'axios'
 
 const home = () => {
-  const imageBanner = "https://images.squarespace-cdn.com/content/v1/5a3afc7390badee4df34b165/1536949169949-LUO15Y0Z8X5RWLANJOHX/Learn+Martial+Arts?format=1500w"
+  const [data, setData] = useState<any>([])
+  const [dataMembership, setDataMembership] = useState<any>([])
+  const [dataTestimony, setDataTestimony] = useState<any>([])
   
+  const fetchData = async() => {
+    const headers = {
+      'Authorization': 'Bearer flPnjtBrWPNIWfl5Fs_m_D8QBup1SUWPQhpaYoDfUHI'
+    }
+    const url = `https://cdn.contentful.com/spaces/6xzpw1n4lyqh/environments/master/entries?content_type=homeContent`
+
+    await axios.get(url, {headers})
+     .then((response) => {
+        setData(response.data.items)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  const fetchDataMembership = async() => {
+    const headers = {
+      'Authorization': 'Bearer flPnjtBrWPNIWfl5Fs_m_D8QBup1SUWPQhpaYoDfUHI'
+    }
+    const url = `https://cdn.contentful.com/spaces/6xzpw1n4lyqh/environments/master/entries?content_type=membershipContent`
+
+    await axios.get(url, {headers})
+     .then((response) => {
+        setDataMembership(response.data.items)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  const fetchDataTestimony = async() => {
+    const headers = {
+      'Authorization': 'Bearer flPnjtBrWPNIWfl5Fs_m_D8QBup1SUWPQhpaYoDfUHI'
+    }
+    const url = `https://cdn.contentful.com/spaces/6xzpw1n4lyqh/environments/master/entries?content_type=testimonyContent`
+
+    await axios.get(url, {headers})
+     .then((response) => {
+        setDataTestimony(response.data.items)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  useEffect(() => {
+      fetchData()
+      fetchDataMembership()
+      fetchDataTestimony()
+    },[])
+
+    console.log(data)
+    console.log(dataMembership)
+    console.log(dataTestimony)
+
   return (
     <div className='flex flex-col items-center justify-center gap-32'>
       <section className='sm:flex items-center'>
         <div>
-          <h1 className='xs:text-4xl sm:text-8xl font-bold'>We are Matrial Arts Specialist</h1>
+          <h1 className='xs:text-4xl sm:text-8xl font-bold'>{data[1]?.fields?.title}</h1>
           <div className='flex gap-3 mt-10'>
             <Link href="/services">
               <button className='bg-black text-white p-3 rounded-lg cursor-pointer'>Our Service</button>
@@ -18,17 +78,17 @@ const home = () => {
             </Link>
           </div>
         </div>
-        <img className='xs:w-full xs:mt-10 sm:w-[50%] rounded' src={imageBanner} alt='image-banner' />
+        <img className='xs:w-full xs:mt-10 sm:w-[50%] rounded' src={data[1]?.fields?.urlMedia} alt='image-banner' />
       </section>
 
       <section className='sm:flex items-center gap-[450px]'>
         <div className='sm:w-48 xs:mb-10 sm:mb-0'>
-          <iframe className='xs:w-[340px] xs:h-[200px] sm:w-[560px] sm:h-[315px]' src="https://www.youtube.com/embed/gB1Ojw0Yl_o?si=P-SIr1sbNb6EAlsY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          <iframe className='xs:w-[340px] xs:h-[200px] sm:w-[560px] sm:h-[315px]' src={data[0]?.fields?.urlMedia} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
         <div>
-          <h1 className='text-4xl font-bold mb-3'>Best Matrial Arts</h1>
+          <h1 className='text-4xl font-bold mb-3'>{data[0]?.fields?.title}</h1>
           <p>
-          Looking to boost your self-defense skills and enhance your personal safety? Learning martial arts is the perfect solution. Master effective self-defense techniques to feel confident and prepared in any situation. Whether it's navigating city streets or handling unexpected encounters, martial arts training equips you with the tools to stay safe and secure. Enhance your situational awareness and learn valuable conflict resolution strategies that prioritize non-violent solutions. Join us on a journey to strengthen your physical and mental resilience while fostering a community committed to personal safety and well-being. Start your martial arts journey today and empower yourself with skills that last a lifetime!
+            {data[0]?.fields?.descriptions}
           </p>
         </div>
       </section>
@@ -39,19 +99,19 @@ const home = () => {
         </h1>
         <div className='flex xs:flex-col sm:flex-row gap-10'>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>1 Months</h3>
-            <p className='text-sm'>You can join the training for 1 month</p>
-            <p className='text-xl'>Rp. 500.000</p>
+            <h3 className='text-xl'>{dataMembership[2]?.fields?.monthTitle}</h3>
+            <p className='text-sm'>{dataMembership[2]?.fields?.descriptions}</p>
+            <p className='text-xl'>{dataMembership[2]?.fields?.price}</p>
           </div>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>3 Months</h3>
-            <p className='text-sm'>You can join the training for 3 month</p>
-            <p className='text-xl'>Rp. 1.300.000</p>
+            <h3 className='text-xl'>{dataMembership[1]?.fields?.monthTitle}</h3>
+            <p className='text-sm'>{dataMembership[1]?.fields?.descriptions}</p>
+            <p className='text-xl'>{dataMembership[1]?.fields?.price}</p>
           </div>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>6 Months</h3>
-            <p className='text-sm'>You can join the training for 6 month</p>
-            <p className='text-xl'>Rp. 2.500.000</p>
+            <h3 className='text-xl'>{dataMembership[0]?.fields?.monthTitle}</h3>
+            <p className='text-sm'>{dataMembership[0]?.fields?.descriptions}</p>
+            <p className='text-xl'>{dataMembership[0]?.fields?.price}</p>
           </div>
         </div>
       </section>
@@ -62,21 +122,21 @@ const home = () => {
         </h1>
         <div className='flex xs:flex-col sm:flex-row gap-10'>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>Mas Gondrong</h3>
+            <h3 className='text-xl'>{dataTestimony[2]?.fields?.name}</h3>
             <p className='text-sm italic'>
-            "Learning martial arts transformed how I feel walking alone at night. Now, I'm more aware and confident, knowing I have the skills to protect myself if needed. It's empowering!"
+            {dataTestimony[2]?.fields?.descriptions}
             </p>
           </div>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>Yayat Bengkel</h3>
+            <h3 className='text-xl'>{dataTestimony[1]?.fields?.name}</h3>
             <p className='text-sm italic'>
-            "As a father, my priority is keeping my family safe. Martial arts training has given me the peace of mind that I can handle unexpected situations with calm and control. It's not just about physical strength; it's about mental readiness."
+            {dataTestimony[1]?.fields?.descriptions}
             </p>
           </div>
           <div className='bg-black text-white text-center p-10 rounded-lg flex flex-col gap-5'>
-            <h3 className='text-xl'>Fany Jungler</h3>
+            <h3 className='text-xl'>{dataTestimony[0]?.fields?.name}</h3>
             <p className='text-sm italic'>
-            "I used to feel anxious in crowded places, but martial arts taught me to trust my instincts and stay alert. It's amazing how much more confident I am now, knowing I have the ability to defend myself if necessary."
+            {dataTestimony[0]?.fields?.descriptions}
             </p>
           </div>
         </div>
